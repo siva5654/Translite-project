@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>signup</title>
+	<link rel="stylesheet" type="text/css" href="css/signup.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+     <link rel="stylesheet" type="text/css" href="css/fonts.css">
+</head>
+<body>
+<div class="header">
+	<div class="container">
+		<div class="headcount">
+			<div class="siva">
+						<button class="go-menu tl-smooth"> <span class="a tl-smooth"></span> <span class="b tl-smooth"></span> <span class="c tl-smooth"></span> </button>
+					</div>
+			<div class="logo">
+				<a href="#">
+				<span>translate.me</span></a>
+			</div>
+			<div class="navmenu">
+					 <i class="icon-cross icon-cross11"></i>
+				<ul>
+					<li><a href="#"> about</a></li>
+					<li class="tl-before"><a href="#">product</a>
+						<ul class="download-drp  tl-smooth ">
+                              <li class="tl-smooth">How it Work</li>
+                              <li class="tl-smooth">Our solutions</li>
+                              <li class="tl-smooth">Features</li>
+                              <li class="tl-smooth">Why Translite</li>
+                              <li class="tl-smooth">What Customers Say</li>
+                           </ul>
+					</li>
+					<li><a href="#">pricing</a></li>
+					<li  class="tl-before1"><a href="#">customers</a>
+					<ul class="download-drp  tl-smooth ">
+                              <li class="tl-smooth">How it Work</li>
+                              <li class="tl-smooth">Our solutions</li>
+                              <li class="tl-smooth">Features</li>
+                              <li class="tl-smooth">Why Translite</li>
+                              <li class="tl-smooth">What Customers Say</li>
+                           </ul></li>
+					<li><a href="#">resources</a></li>
+					<li class="req-demo"><a href="#">REQUEST A DEMO</a></li>
+				</ul>
+			</div>
+			<div class="signup">
+				<a href="#">sign up</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="tl1-singup">
+	<div class="container">
+		<div class="lmit">
+			<div class="tl-signup-form">
+				<h2>Get started with a free account</h2>
+				<p>Sign up in a minute. No credit card required.</p>
+				<form action="/action_page.php">
+					<input type="text" name="username" placeholder="user name" class="form-username common">
+					<input type="email" name="email" placeholder="email(company email)" class="form-mailid common">
+					<input type="password" name="username" placeholder="password" class="form-number common">
+					<button  onclick="myFunction()"> SIGN UP</button>
+					<p>Already have an account ? <span>Log in</span></p>
+				</form>
+				<h4>Or</h4>
+				<div class="tl-socialnw">
+					<p class="red"><i class="icon-google-plus2"></i>google</p>
+					<p class="blue"><i class="icon-linkedin i-cc"></i>linkedin</p>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+<div class="tl-footer">
+		<div class="container">
+			<div class="tl-footer-cont">
+				<div class="tl-translite">
+					<a href="#"><img src="img/logo.png"></a>
+					<p><small>TranslateMe © All Rights Reserved</small></p>
+					  <h5 class="tl-footer-scl"><a href="#">
+                  <i class="icon-facebook2"></i></a>
+                 <a href="#"> <i class="icon-instagram"></i></a>
+                <a href="#">  <i class="icon-twitter"></i></a>
+                 <a href="#"> <i class="icon-linkedin"></i></a>
+                  </h5>
+               </div>
+               <div class="tl-prdt-resrc">
+                  <ul>
+                     <li>
+                        <ul>
+                           <li class="tl-fristchild"><a href="#">product</a></li>
+                           <li><a href="#"> features</a></li>
+                           <li><a href="#">integration</a></li>
+                           <li><a href="#">pricing</a></li>
+                           <li><a href="#">api</a></li>
+                           <li><a href="#">client app</a></li>
+                           <li><a href="#">integration</a></li>
+                           <li><a href="#">pricing</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <ul>
+                           <li class="tl-fristchild"><a href="#">resourece</a></li>
+                           <li><a href="#"> features</a></li>
+                           <li><a href="#">integration</a></li>
+                           <li><a href="#">pricing</a></li>
+                           <li><a href="#">api</a></li>
+                           <li><a href="#">client app</a></li>
+                           <li><a href="#">pricing</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <ul>
+                           <li class="tl-fristchild"><a href="#">support</a></li>
+                            <li><a href="#"> features</a></li>
+                           <li><a href="#">integration</a></li>
+                           <li><a href="#">pricing</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <ul>
+                           <li class="tl-fristchild"><a href="#">product</a></li>
+                           <li><a href="#"> features</a></li>
+                           <li><a href="#">integration</a></li>
+                           <li><a href="#">pricing</a></li>
+                            <li><a href="#"> features</a></li>
+                           <li><a href="#">integration</a></li>
+                           <li><a href="#">pricing</a></li>
+                        </ul>
+                		</li>
+                	</ul>
+                </div>
+			</div>
+		</div>
+	</div>
+	<div id="login">must be filled in valid details</div>
+	<div class="scrollbar"></div>
+		<div id="overlay"></div>
+	<script src="js/index.js"></script>
+<script type="text/javascript">
+		 $('.common').on('blur',function(){
+          if($(this).val() == '')
+         {
+         $(this).css('border','1px solid red');
+         return false;
+         }
+         else{
+         $(this).css('border','1px solid green');
+         }
+
+            })
+			$('form').submit(function(){
+   			  if($('.form-username').val() == '')
+			{
+			$('.form-username').css('border','1px solid red');
+			return false;
+			}
+			else{
+			$('.form-username').css('border','1px solid green');
+			}
+
+			 if($('.form-mailid').val() == '')
+			{
+			$('.form-mailid').css('border','1px solid red');
+			return false;
+			}
+			else{
+			$('.form-mailid').css('border','1px solid green');
+			}
+			 if($('.form-number').val() == '')
+			{
+			$('.form-number').css('border','1px solid red');
+			return false;
+			}
+			else{
+			$('.form-number').css('border','1px solid green');
+			}
+	})
+</script>
+			<script>
+		function myFunction() {
+		var x = document.getElementById("login");
+		x.className = "show";
+		setTimeout(function(){ x.className = x.className.replace("show", ""); },2500);
+		}
+	</script>
+</body>
+</html>

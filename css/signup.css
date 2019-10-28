@@ -1,0 +1,880 @@
+body{
+ font-size: 14px;
+ font-family: "open_sansregular" ,sans-serif;
+margin-top: 111px;
+}
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../fonts/opensans-bold-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+	padding: 0px;
+	margin:0px;
+}
+*,:before,.:after{
+	box-sizing: border-box;
+}
+}
+*,*:focus {
+  outline: none; 
+}
+button , input{
+  outline: none;
+}
+ul{
+	list-style: none;
+}
+img{
+	max-width: 100%;
+}
+.tl-smooth{
+	transition: 0.5s;
+	-webkit-transition:0.5s;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/*****************************************************/
+.header{
+ width: 100%;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.06);
+    background-color: #ffffff;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0px;
+    z-index: 1;
+}
+.container{
+    margin:0 auto;
+    position:relative
+}
+@media only screen and (max-width:992px){
+    .container{
+        padding:0 12px
+    }
+}
+@media(min-width:992px){
+    .container{
+        width:970px
+    }
+}
+@media only screen and (min-width:1200px){
+    .container{
+        width:1096px
+    }
+}
+.headcount{
+  font-size: 0px;
+  padding: 50px 0px 38px 0px;
+
+}
+.logo , .navmenu ,.signup{
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+  width: 20%;
+}
+.siva{
+  display: inline-block;  
+  font-size: 14px;
+  color: black;
+  display: none;
+}
+.logo > a >img{
+ width: 168px;
+  vertical-align: middle;    
+}
+.logo > a >span{
+  font-family: Helvetica;
+  font-size: 24px;
+  font-weight: bold;
+  color: #470298;
+  text-transform:capitalize;
+}
+.navmenu{
+  width: 60%;
+  text-align: right;
+  position: relative;
+}
+.navmenu >ul{
+  font-size: 0px;
+  margin:0px -14px;
+  position: relative;
+}
+.navmenu >ul >li{
+  display: inline-block;
+  font-size: 14px;
+  padding: 0px 18px;
+  text-transform: capitalize;
+  color: #5b5b5b;
+
+}
+.tl-before{
+  color: black;
+}
+.tl-before:after{
+  content: '';
+    position: absolute;
+    top: 50%;
+    padding: 3px;
+    border: solid black;
+    margin: -4px 5px;
+    transform: rotate(45deg);
+    border-width: 0 1px 1px 0;
+        transition: 0.5s;
+}
+.tl-before1:after{
+  content: '';
+    position: absolute;
+    top: 50%;
+    padding: 3px;
+    border: solid black;
+    margin: -4px 5px;
+    transform: rotate(45deg);
+    border-width: 0 1px 1px 0;
+        transition: 0.5s;
+}
+.tl-before:hover:after{
+    transform: rotate(225deg)!important;
+    transition: 0.5s;
+        margin: 0px 5px;
+}
+.tl-before1:hover:after{
+    transform: rotate(225deg)!important;
+    transition: 0.5s;
+    margin: 0px 5px;
+}
+.req-demo{
+  font-weight: 600;
+  color: #5d5d5d;
+}
+.signup{
+  width: 20%;
+text-align: center;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: #6c19c7;
+    width: 100%;
+    height: 100%;
+    opacity: 0.87!important;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.openn {
+    visibility: visible!important;
+    opacity: 1!important;
+}
+.signup >a{
+  border-radius: 19px;
+  background-color: #fb1ea0;
+  border:none;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding:10px 43px;
+}
+.signup >button >a{
+  color: #fff!important
+}
+.req-demo{
+  background-color: #f9f9f9;
+}
+.tl1-singup{
+  background-color:#f9f9f9;
+  background-image: url(../img/map.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.lmit{
+  padding:60px 0px;
+}
+.tl-signup-form{
+    width: 620px;
+  height: 715px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.11);
+  background-color: #ffffff;
+  margin: 0px auto;
+  border-radius: 8px;
+  position: relative;
+}
+.tl-signup-form >h2{
+    font-size: 30px;
+  font-weight: bold;
+  color: #5b5b5b;
+  text-align: center;
+  padding-top: 61px;
+}
+.tl-signup-form >p{
+ font-size: 15px;
+  font-weight: 300;
+  line-height: 1.67;
+  text-align: center;
+  color: #5b5b5b;
+  padding-bottom: 57px;
+}
+.go-menu{
+position: absolute;
+    top: 50%;
+    width: 32px;
+    height: 18px;
+    margin: -10px auto 0;
+    left: 20px;
+    z-index: 12;
+    display: block;
+    padding: 0;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent!important;
+  }
+  .go-menu>span {
+    width: 100%;
+    height: 3.4px;
+    position: absolute;
+    border-radius: 0;
+    color:#470298;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    background-color:#470298!important;
+}
+.go-menu>.b {
+    top: 7px;
+    width: 75%;
+}
+.go-menu>.c {
+    top: 14px;
+    width: 45%;
+}
+.icon-cross11 ,#icon-cross11{
+opacity: 0;
+display: none;
+
+}
+.tl-signup-form >form{
+  text-align: center;
+}
+.tl-signup-form >form >input{
+   width: 430px;
+  border-radius: 3px;
+  background-color: #fafafa;
+ margin-bottom: 26px;
+ border: 1px solid #cccccc;
+ text-transform: capitalize;
+ padding:15px 0px 18px 18px;
+}
+.tl-signup-form >form > button{
+  width: 460px;
+  height: 50px;
+  border-radius: 3px;
+  background-color: #e90d8f; 
+  border:none;
+  color: #fff;
+  text-transform: uppercase; 
+  cursor: pointer;
+}
+.tl-footer-scl{
+ margin-top: 24px;
+ font-size: 18px;
+}
+.tl-signup-form >form > p{
+
+font-size: 15px;
+  font-weight: 300;
+  line-height: 1.67;
+  text-align: center;
+  color: #5b5b5b;
+  padding:30px 0px;
+}
+.tl-signup-form >form > p >span{
+color:#e90d8f;
+cursor: pointer;
+}
+.tl-signup-form >h4{
+margin: 0px auto;text-align: center;
+font-weight: normal;
+}
+.tl-signup-form >h4:before,.tl-signup-form >h4:after{
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 1px;
+  background: #dddddd;
+  right: 0px;
+  margin: 7px 150px;
+}
+.i-cc{
+  color:#0d7ee9!important;
+}
+
+.tl-signup-form >h4:after{
+left: 0px;
+}
+.tl-socialnw{
+  font-size: 0px;
+  text-align: center;
+}
+.tl-socialnw >p{
+  display: inline-block;
+  font-size: 14px;
+  padding: 13px 65px 14px 74px;
+  border: 1px solid red;
+  margin:0px 20px;
+  margin-top: 34px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.tl-socialnw >p >i{
+  padding-right: 8px;
+}
+.icon-google-plus2{
+  color: red;
+}
+.tl-socialnw > p:hover{
+  background-color: red;
+  color: #fff;
+}
+.tl-socialnw > p:hover .icon-google-plus2 {
+  color: #fff;
+}
+.blue{
+  border:1px solid #0d7ee9!important;
+  border-radius: 3px;
+}
+.blue:hover{
+  background-color: #0d7ee9!important;
+  color: #fff;
+}
+.blue:hover .icon-linkedin {
+  color: #fff!important;
+}
+.tl-footer{
+  width: 100%;
+    height: 390px;
+    border-color: #1e0042;
+    background-color: #1e0042;
+   background-image: url(../img/map.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px 0px;
+}
+.tl-footer-cont{
+  font-size: 0px;
+  padding-top: 86px;
+  cursor: pointer;
+}
+.tl-translite{
+  display: inline-block;
+  font-size: 14px;
+  color: white;
+  width: 30%;
+  vertical-align: top;
+}
+.tl-translite > a >img{
+ width: 168px;
+  vertical-align: middle;    
+}
+.tl-translite > p >small{
+  font-size: 10px;
+  color: lightgray;
+  line-height: 4;
+
+}
+.tl-prdt-resrc{
+  display: inline-block;
+  font-size: 14px;
+  width: 70%;
+  color: white;
+  vertical-align: top;
+}
+.tl-prdt-resrc >ul{
+font-size: 0px;
+}
+.tl-prdt-resrc >ul >li{
+ display: inline-block;
+ font-size: 14px;
+ width: 25%;
+ text-align: center;
+ vertical-align: top
+
+}
+.tl-prdt-resrc >ul >li >ul{
+ text-transform: capitalize;
+}
+.tl-prdt-resrc >ul >li >ul >li >a{
+  display: block;
+  color: #caacdf;
+  line-height: 30px;
+  text-align: left;
+
+}
+.tl-prdt-resrc >ul >li >ul >li >a:hover{
+    text-decoration: underline;
+}
+.tl-fristchild >a{
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white!important;
+  font-size: 14px;
+}
+.scrollbar{
+  width: 40px;
+  height: 40px;
+  background-color: #000000cc;
+  position: fixed;
+  right: 20px;
+  bottom: 20%;
+  cursor: pointer;
+}
+.scrollbar:after{
+      content: '';
+    position: absolute;
+    top: 50%;
+    padding: 7px;
+    border: solid white;
+    margin: -4px 13px;
+    transform: rotate(45deg);
+    border-width: 1px 0px 0px 1px;
+}
+.icon-facebook2 ,.icon-instagram ,.icon-twitter ,.icon-linkedin{
+  font-size: 17px;
+  color: #fff;
+}
+.tl-footer-scl > a{
+  padding:0px 8px;
+}
+.scrollbar:hover{
+  background-color: #6c19c7;
+}
+
+
+@media only screen and (max-width: 767px){
+  .tl-signup-form{
+    width: 100%;
+    height: 100%;
+  }
+ .navmenu{
+    opacity: 0;
+    position: fixed;
+    left: -270px;
+    top: 0px;
+    background-color:#6c19c7;
+    max-width: 250px;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    transition: 0.7s;
+  }
+  .navmenu >ul >li >a{
+    color: #fff;
+  }
+   .navmenu  >ul{
+    margin:0px;
+  }
+  .tl-before:after{
+    display: none;
+  }
+  .tl-footer{
+    padding: 0px;
+  }
+   .tl-before1:after{
+    display: none;
+  }
+  .tl-footer-scl{
+    margin-top: 12px;
+  }
+  .tl-before:before{
+    content: '';
+    position: absolute;
+    top: 140px;
+    width: 0;
+    height: 0;
+    padding: 0px;
+    right: 20px;
+    border-style: solid;
+    margin: -74px 0px 0px;
+    border-width: 7px 0 7px 7px;
+    transition: 0.5s;
+    border-color: transparent transparent transparent #fff;
+       transform: rotate(0deg)
+}
+ .tl-before:hover:before{
+       transform: rotate(90deg)!important;
+ }
+  .tl-before1:hover:before{
+       transform: rotate(90deg)!important;
+ }
+  .tl-before1:before{
+    content: '';67
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0px;
+    right: 0px;
+    border-style: solid;
+    margin: -74px 0px 0px;
+    border-width: 7px 0 7px 7px;
+    transition: 0.5s;
+    border-color: transparent transparent transparent #fff;
+       transform: rotate(0deg)
+}
+ .req-demo{
+  color: #fff;
+    background: none;
+  }
+   .download-drp{
+    z-index: 1;
+    color: #fff;
+display: none;
+font-size: 12px;
+   }
+.active{
+display: block;
+  transition: 0.5s;
+  background-color: #6c19c77a;
+}
+  .download-drp >li{
+    padding: 14px 0px;
+    cursor: pointer;
+  }
+  .tl-before1:before{
+    position: absolute;
+    margin: 7px 0px;
+    right: 20px;
+  }
+.icon-cross11 {
+ opacity: 1;
+    position:absolute;
+    color: #fff;
+    z-index: 1111;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+
+    display: block;
+  }
+
+  .ham-show{
+    opacity: 1;
+    transition: 0.5s;
+    left: 0px;
+  }
+  .navmenu >ul >li{
+    display: block;
+    text-align: left;
+    padding: 14px 40px;
+    transition: 0.5s;
+    max-width: 500px;
+
+  }
+  .tl-signup-form >form{
+    padding: 18px;
+  }
+  .navmenu >ul >li{
+    border-bottom:1px solid #fff;
+  }
+  .logo{
+    width: 80%;
+    display: inline-block;
+    vertical-align: middle;
+
+  }
+  .headcount{
+    padding: 24px 0px;
+  }
+  .siva{
+    width: 20%;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    vertical-align:middle;
+  }
+  .signup{
+    display: none;
+  }
+  .lmit{
+    padding: 36px 0px;
+  }
+  .tl-signup-form >form >input{
+    width: 100%;
+    padding-left: 6px;
+  }
+  .tl-signup-form >form > button{
+    width:100%;
+  }
+  .tl-socialnw >p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+padding: 12px 100px;
+  }
+  .tl-signup-form >h4:before, .tl-signup-form >h4:after{
+      width: 25%;
+    height: 1px;
+    margin: 10px 48px;
+  }
+  .tl-footer{
+    height: 100%;
+  }
+  .tl-prdt-resrc >ul >li{
+    width: 50%;
+  }
+  .signup{
+  width: 20%;
+  }
+  .tl-prdt-resrc{
+    width: 100%;
+  }
+  .tl-signup-form >form > p{
+    padding: 14px 0px 0px;
+  }
+  .signup >a{
+    padding: 6px 15px;  }
+
+.tl-footer-cont{
+  padding-top: 24px;
+}
+.tl-socialnw{
+  padding-bottom: 24px;
+}
+.tl-signup-form >p{
+  padding-bottom: 6px;
+  line-height: 1.4;
+}
+.tl-translite{
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.tl-translite > a >img{
+  max-width: 100%;
+}
+.tl-translite > p >small{
+  line-height: 1.5;
+}
+.tl-prdt-resrc >ul >li >ul{
+  margin:0px 36px;
+}
+.tl-signup-form >h2{
+  padding-top: 24px;
+  font-size: 18px;
+  padding-bottom: 8px;
+}
+body{
+  margin-top: 76px;
+}
+
+#login {
+    visibility: hidden;
+    max-width: 250px;
+    background-color:#fb4053;
+    color:#fff ;
+    text-align: center;
+    border-radius: 10px;
+    padding: 12px;
+    position: fixed;
+    z-index: 1;
+    top: 90px;
+    margin:0px auto;
+    left: 0px;
+    right: 0px;
+    font-size: 17px;
+    transition: 0.5s;
+}
+.show {
+    visibility: visible!important;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {top : -20px; opacity: 0;}
+    to {top: 90px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {top: 90px; opacity: 1;}
+    to {top: -20px; opacity: 0;}
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+   .navmenu >ul >li{
+    padding:0px 8px;
+  }
+  .download-drp {
+  position: absolute;
+  top: 0px;
+  z-index: 4;
+  font-size: 14px;
+  opacity: 0;
+  margin:0px -40px;
+  width: 166px;
+  visibility: hidden;
+  border:1px solid lightgray;
+  background-color: #fff;
+   }
+
+.open .download-drp {
+  top: 30px;
+  opacity: 1;
+  visibility: visible;
+  z-index: 999;
+   }
+.download-drp > li {
+  padding: 10px 12px; 
+text-align: left;
+font-size: 14px;
+color: #414453;
+cursor: pointer;
+}
+
+.download-drp > li:hover {
+  background-color: lightgray;
+   }
+
+.download-drp:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  width: 0px;
+  z-index: 2;
+left: 0px;
+right: 0px;
+  height: 0px;
+  margin: 0px auto;
+  border-style: solid;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent lightgray transparent; 
+}
+.tl-signup-form >h4:after{
+left: 0px;
+}
+
+#login {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #fb4053;
+    color:#fff ;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    position: fixed;
+    z-index: 1;
+  right: 50px;
+    bottom:60px;
+    font-size: 17px;
+}
+.show {
+    visibility: visible!important;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {right : -20px; opacity: 0;}
+    to {right: 50px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {right: 50px; opacity: 1;}
+    to {right: -20px; opacity: 0;}
+}
+}
+@media only screen and (min-width: 1025px) and (max-width: 2200px){
+  .download-drp {
+  position: absolute;
+  top: 0px;
+  z-index: 4;
+  font-size: 14px;
+  opacity: 0;
+  margin:0px -40px;
+  width: 166px;
+  visibility: hidden;
+  background-color: #fff;
+   }
+
+.open .download-drp {
+  visibility: none;
+   }
+.download-drp > li {
+  padding: 10px 12px; 
+text-align: left;
+font-size: 14px;
+color: #414453;
+cursor: pointer;
+}
+.download-drp:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  width: 0px;
+  z-index: 2;
+left: 0px;
+right: 0px;
+  height: 0px;
+  margin: 0px auto;
+  border-style: solid;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #fff transparent; 
+}
+.navmenu >ul > li:hover .download-drp{
+  top: 30px;
+  opacity: 1;
+  visibility: visible;
+  z-index: 999;
+}
+
+#login {
+    visibility: hidden;
+    min-width: 250px;
+    background-color:#fb4053;
+    color:#fff ;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    position: fixed;
+    z-index: 1;
+  right: 50px;
+    bottom:60px;
+    font-size: 17px;
+}
+.show {
+    visibility: visible!important;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {right : -20px; opacity: 0;}
+    to {right: 50px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {right: 50px; opacity: 1;}
+    to {right: -20px; opacity: 0;}
+}
+
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){}
